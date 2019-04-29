@@ -1,0 +1,29 @@
+<resources>
+    <!-- MainActivity -->
+    <string name="app_name">E-Mail-Message</string>
+    <string name="action_settings">Settings</string>
+    <string name="headlinePersons">Personen auswählen:</string>
+    <string name="KiraBegau">Kira Schatziiiii</string>
+    <string name="Mama">Mama</string>
+    <string name="Papa">Papa</string>
+    <string name="Stefan">Stefan</string>
+    <string name="DateHeadline">Datum:</string>
+    <string name="EmpfaengerHeadline">Empfänger:</string>
+    <string name="BetreffHeadline">Betreff:</string>
+    <string name="MessageHint">Ihre Mitteilung</string>
+    <string name="ConcerningHint">Betreff</string>
+    <string name="chooseReceivers">Empfänger auswählen</string>
+
+    <!-- New activity -->
+    <string name="NewPersonActivityHeadline">Neue Person hinzufügen</string>
+    <string name="Vorname">Vorname</string>
+    <string name="Nachname">Nachname</string>
+    <string name="Beruf">Beruf</string>
+    <string name="EMailadress">E-Mail-Adresse</string>
+    <string name="Save">Hinzufügen</string>
+
+    <string name="VornameHeadline">Vorname:</string>
+    <string name="NachnameHeadline">Nachname:</string>
+    <string name="BerufHeadline">Beruf:</string>
+    <string name="EMailadressHeadline">E-Mail-Adresse:</string>
+</resources>
