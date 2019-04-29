@@ -12,22 +12,24 @@
 
     <application
         android:allowBackup="true"
+        android:banner="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/mail_icon"
-        android:banner="@mipmap/ic_launcher"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.Leanback">
-        <activity android:name=".NewPersonActivity"></activity>
+        android:supportsRtl="true">
+        <activity android:name=".NewPersonActivity" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/Theme.Leanback">
-            <!--android:theme="@style/AppTheme.NoActionBar" -->
-        <intent-filter>
+
+            <!-- android:theme="@style/AppTheme.NoActionBar" -->
+            <intent-filter>
+
                 <!-- Activity wird automatisch gestartet. -->
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
-        </intent-filter>
+            </intent-filter>
         </activity>
     </application>
 

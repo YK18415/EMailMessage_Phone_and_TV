@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:ignore="MissingDefaultResource">
+    android:background="@color/colorPrimary"
 
     <!-- Screen elements that can render outside the overscan safe area go here -->
 
@@ -15,8 +16,8 @@
     android:layout_marginTop="27dp"
     android:layout_marginBottom="27dp"
     android:layout_marginLeft="48dp"
-    android:layout_marginRight="48dp">
-
+    android:layout_marginRight="48dp"
+        android:background="#11111111">
 
             <EditText
                 android:id="@+id/editTextMessage"
@@ -45,6 +46,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
         android:text="@string/EmpfaengerHeadline"
+        android:nextFocusLeft="@id/editTextMessage"
         app:layout_constraintEnd_toStartOf="@+id/textViewReceiver"
         app:layout_constraintTop_toBottomOf="@+id/btn_show_people" />
 
@@ -70,6 +72,8 @@
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="16dp"
         android:text="@string/BetreffHeadline"
+        android:nextFocusLeft="@id/editTextMessage"
+        android:nextFocusDown="@id/btnSend"
         app:layout_constraintBottom_toTopOf="@+id/textView7"
         app:layout_constraintEnd_toStartOf="@+id/editTextConcerning"
         app:layout_constraintStart_toEndOf="@+id/editTextMessage"
