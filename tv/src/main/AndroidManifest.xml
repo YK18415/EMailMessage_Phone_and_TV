@@ -12,11 +12,12 @@
 
     <application
         android:allowBackup="true"
-        android:banner="@mipmap/ic_launcher"
+        android:banner="@mipmap/mail_icon"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/mail_icon"
         android:supportsRtl="true">
-        <activity android:name=".NewPersonActivity" />
+        <activity android:name=".NewPersonActivity"
+            android:theme="@style/Theme.Leanback"/>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"

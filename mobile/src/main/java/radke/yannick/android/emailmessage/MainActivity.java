@@ -327,15 +327,16 @@ public class MainActivity extends AppCompatActivity {
         String emailAddressesString = combineEMailAddresses();
 
         Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
-        emailIntent.setData(Uri.parse(emailAddressesString)); // The e-mail addresses that should be delivered to.
+        /*emailIntent.setData(Uri.parse(emailAddressesString)); // The e-mail addresses that should be delivered to.
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, betreff); // A constant string holding the (desired subject line == Betreffzeile) of a message.
         emailIntent.putExtra(Intent.EXTRA_TEXT, message);
-
+*/
         try {
             clearSelectedPersons();
             emailadressesList.clear();
             textViewReceiver.setText("");
-            startActivity(Intent.createChooser(emailIntent, "Öffne E-Mail-Client..."));
+           // startActivity(Intent.createChooser(emailIntent, "Öffne E-Mail-Client..."));
+            startActivity(emailIntent);
             finish();
         } catch (android.content.ActivityNotFoundException ex) {
             Toast.makeText(MainActivity.this,"Es sind keine E-Mail-Clients installiert.", Toast.LENGTH_SHORT).show();

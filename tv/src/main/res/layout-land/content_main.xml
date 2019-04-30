@@ -9,45 +9,38 @@
 
     <!-- Screen elements that can render outside the overscan safe area go here -->
 
-    <!-- Nested RelativeLayout with overscan-safe margin -->
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginTop="27dp"
-    android:layout_marginBottom="27dp"
-    android:layout_marginLeft="48dp"
-    android:layout_marginRight="48dp"
-        android:background="#11111111">
-
-            <EditText
-                android:id="@+id/editTextMessage"
-                style="@style/Base.Widget.MaterialComponents.TextInputEditText"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="8dp"
-                android:autofillHints="Mitteilung"
-                android:background="@drawable/edittext_rounded_corners_border"
-                android:ems="10"
-                android:gravity="top"
-                android:hint="@string/MessageHint"
-                android:inputType="textMultiLine"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/textView6"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/editTextMessage"
+        style="@style/Base.Widget.MaterialComponents.TextInputEditText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:autofillHints="Mitteilung"
+        android:background="@drawable/edittext_rounded_corners_border"
+        android:ems="10"
+        android:gravity="top"
+        android:hint="@string/MessageHint"
+        android:inputType="textMultiLine"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="35dp"
         android:layout_marginEnd="8dp"
-        android:text="@string/EmpfaengerHeadline"
         android:nextFocusLeft="@id/editTextMessage"
+        android:text="@string/EmpfaengerHeadline"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         app:layout_constraintEnd_toStartOf="@+id/textViewReceiver"
+        app:layout_constraintStart_toStartOf="@+id/textView8"
         app:layout_constraintTop_toBottomOf="@+id/btn_show_people" />
 
     <TextView
@@ -56,27 +49,27 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="75dp"
+        android:layout_marginBottom="35dp"
         android:text="@string/DateHeadline"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        app:layout_constraintBottom_toTopOf="@+id/btnSend"
         app:layout_constraintEnd_toStartOf="@+id/textViewDate"
-        app:layout_constraintStart_toEndOf="@+id/editTextMessage"
+        app:layout_constraintStart_toStartOf="@+id/textView8"
         tools:ignore="NotSibling" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="16dp"
-        android:text="@string/BetreffHeadline"
         android:nextFocusLeft="@id/editTextMessage"
         android:nextFocusDown="@id/btnSend"
+        android:text="@string/BetreffHeadline"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         app:layout_constraintBottom_toTopOf="@+id/textView7"
         app:layout_constraintEnd_toStartOf="@+id/editTextConcerning"
-        app:layout_constraintStart_toEndOf="@+id/editTextMessage"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
         tools:ignore="NotSibling" />
 
@@ -84,14 +77,13 @@
         android:id="@+id/textViewReceiver"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="35dp"
         android:layout_marginEnd="8dp"
-        android:background="#F4F4F4"
         android:ems="10"
         android:inputType="textPersonName"
         android:scrollbars="horizontal"
-        android:textSize="18sp"
         android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_show_people" />
 
@@ -100,13 +92,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="70dp"
-        android:background="#F4F4F4"
+        android:layout_marginBottom="35dp"
         android:ems="10"
         android:inputType="date"
         android:scrollbars="horizontal"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnSend"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
@@ -118,6 +110,7 @@
         android:layout_marginBottom="8dp"
         android:ems="10"
         android:hint="@string/ConcerningHint"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/textViewDate"
         app:layout_constraintEnd_toEndOf="parent"
@@ -131,6 +124,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:text="@string/chooseReceivers"
+        android:textAppearance="?android:attr/textAppearanceMedium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toEndOf="@+id/editTextMessage"
@@ -146,9 +140,9 @@
             android:layout_marginBottom="8dp"
             android:drawableLeft="@android:drawable/ic_menu_send"
             android:text="send"
+            android:textAppearance="?android:attr/textAppearanceMedium"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/editTextConcerning"
             app:layout_constraintStart_toEndOf="@+id/editTextMessage" />
 
-    </android.support.constraint.ConstraintLayout>
 </android.support.constraint.ConstraintLayout>
