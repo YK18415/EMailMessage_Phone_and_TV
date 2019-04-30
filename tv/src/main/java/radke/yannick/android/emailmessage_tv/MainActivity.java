@@ -128,8 +128,16 @@ public class MainActivity extends Activity {
                 }
             }
         });*/
-        InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
-        imm.hideSoftInputFromWindow(editTextMessage.getWindowToken(), 0);
+
+        editTextMessage.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (event != null&& (event.getKeyCode() == KeyEvent.KEYCODE_ENTER)) {
+                    InputMethodManager in = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                    in.hideSoftInputFromWindow(editTextMessage.getApplicationWindowToken(),InputMethodManager.HIDE_NOT_ALWAYS);
+                }
+                return false;
+            }
+        });
     }
 
     private <T> T loadData(String key, Class<T> type, SharedPreferences settings) {
@@ -147,6 +155,8 @@ public class MainActivity extends Activity {
         if(personList.size() == 0) {
             personList.add(new Person("Kira", "Begau", "Student", "kira.begau@gmx.de"));
             personList.add(new Person("Kirsten", "Büggener", "VW", "k.bueggener@gmx.de"));
+            personList.add(new Person("Max", "Mustermann", "Softwareentwickler", "m.mustermann@gmx.de"));
+            personList.add(new Person("Hallo", "Du da", "Haha", "h.du@gmx.de"));
         }
 
         if(popupReceiverArray != null) {
@@ -208,7 +218,7 @@ public class MainActivity extends Activity {
         final ArrayList<String> toRemoveFromEmailadressesList = new ArrayList();
 
         Dialog dialog;
-        final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this,  R.style.Theme_AppCompat);
+        final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this,  R.style.AppTheme_NoActionBar);
         builder.setTitle("Empfängerwahl");
         builder.setMultiChoiceItems( personsStringList, personSelectedBoolean, new DialogInterface.OnMultiChoiceClickListener() {
             @Override
